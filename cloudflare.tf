@@ -20,29 +20,29 @@ resource "cloudflare_record" "maishsk.com_nmala" {
     ttl = 1
 }
 
-#resource "cloudflare_record" "maishsk.com_nmade" {
+resource "cloudflare_record" "maishsk.com_nmade" {
+    domain = "${var.cloudflare_domain}"
+    name = "maishsk.com"
+    value = "78.46.49.59"
+    type = "A"
+    ttl = 1
+}
+
+#resource "cloudflare_record" "maishsk.com_nmafr" {
 #    domain = "${var.cloudflare_domain}"
 #    name = "maishsk.com"
-#    value = "78.46.49.59"
+#    value = "188.165.232.215"
 #    type = "A"
 #    ttl = 1
 #}
 
-resource "cloudflare_record" "maishsk.com_nmafr" {
-    domain = "${var.cloudflare_domain}"
-    name = "maishsk.com"
-    value = "188.165.232.215"
-    type = "A"
-    ttl = 1
-}
-
-resource "cloudflare_record" "maishsk.com_nmakc" {
-    domain = "${var.cloudflare_domain}"
-    name = "maishsk.com"
-    value = "192.187.97.130"
-    type = "A"
-    ttl = 1
-}
+#resource "cloudflare_record" "maishsk.com_nmakc" {
+#    domain = "${var.cloudflare_domain}"
+#    name = "maishsk.com"
+#    value = "192.187.97.130"
+#    type = "A"
+#    ttl = 1
+#}
 
 resource "cloudflare_record" "maishsk.com_nmanc" {
     domain = "${var.cloudflare_domain}"
