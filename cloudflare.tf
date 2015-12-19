@@ -4,54 +4,6 @@ provider "cloudflare" {
     token = "${var.cloudflare_token}"
 }
 
-resource "cloudflare_record" "maishsk.com_nma2" {
-    domain = "${var.cloudflare_domain}"
-    name = "maishsk.com"
-    value = "45.43.221.3"
-    type = "A"
-    ttl = 1
-}
-
-resource "cloudflare_record" "maishsk.com_nmala" {
-    domain = "${var.cloudflare_domain}"
-    name = "maishsk.com"
-    value = "45.43.221.20"
-    type = "A"
-    ttl = 1
-}
-
-resource "cloudflare_record" "maishsk.com_nmade" {
-    domain = "${var.cloudflare_domain}"
-    name = "maishsk.com"
-    value = "78.46.49.59"
-    type = "A"
-    ttl = 1
-}
-
-resource "cloudflare_record" "maishsk.com_nmafr" {
-    domain = "${var.cloudflare_domain}"
-    name = "maishsk.com"
-    value = "188.165.232.215"
-    type = "A"
-    ttl = 1
-}
-
-resource "cloudflare_record" "maishsk.com_nmakc" {
-    domain = "${var.cloudflare_domain}"
-    name = "maishsk.com"
-    value = "192.187.97.130"
-    type = "A"
-    ttl = 1
-}
-
-resource "cloudflare_record" "maishsk.com_nmanc" {
-    domain = "${var.cloudflare_domain}"
-    name = "maishsk.com"
-    value = "192.111.152.115"
-    type = "A"
-    ttl = 1
-}
-
 resource "cloudflare_record" "nma2" {
     domain = "${var.cloudflare_domain}"
     name = "nma2"
