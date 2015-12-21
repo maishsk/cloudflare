@@ -5,4 +5,3 @@ resource "cloudflare_record" "maishsk.com_nma2" {
     type = "A"
     ttl = 1
 }
-
