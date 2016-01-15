@@ -31,7 +31,7 @@ resource "cloudflare_record" "nmade" {
 resource "cloudflare_record" "nmafr" {
     domain = "${var.cloudflare_domain}"
     name = "nmafr"
-    value = "188.165.232.215"
+    value = "176.31.196.112"
     type = "A"
     ttl = 1
 }

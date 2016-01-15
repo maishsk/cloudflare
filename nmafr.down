@@ -1,7 +1,7 @@
 resource "cloudflare_record" "maishsk.com_nmafr" {
     domain = "${var.cloudflare_domain}"
     name = "maishsk.com"
-    value = "188.165.232.215"
+    value = "176.31.196.112"
     type = "A"
     ttl = 1
 }
