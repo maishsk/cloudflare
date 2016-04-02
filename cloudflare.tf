@@ -60,11 +60,19 @@ resource "cloudflare_record" "nmafrv4" {
     ttl = 1
 }
 
+resource "cloudflare_record" "nmakcv4" {
+    domain = "${var.cloudflare_domain}"
+    name = "nmakcv4"
+    value = "192.187.97.130"
+    type = "A"
+    ttl = 1
+}
+
 resource "cloudflare_record" "nmakc" {
     domain = "${var.cloudflare_domain}"
     name = "nmakc"
-    value = "192.187.97.130"
-    type = "A"
+    value = "2602:ffc5:ccc:ec::2"
+    type = "AAAA"
     ttl = 1
 }
 
