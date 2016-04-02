@@ -12,11 +12,19 @@ resource "cloudflare_record" "nma2" {
     ttl = 1
 }
 
+resource "cloudflare_record" "nmalav4" {
+    domain = "${var.cloudflare_domain}"
+    name = "nmalav4"
+    value = "45.43.221.20"
+    type = "A"
+    ttl = 1
+}
+
 resource "cloudflare_record" "nmala" {
     domain = "${var.cloudflare_domain}"
     name = "nmala"
-    value = "45.43.221.20"
-    type = "A"
+    value = "2602:ffc5:ccd:1e6::2"
+    type = "AAAA"
     ttl = 1
 }
 
@@ -31,6 +39,14 @@ resource "cloudflare_record" "nmade" {
 resource "cloudflare_record" "nmafr" {
     domain = "${var.cloudflare_domain}"
     name = "nmafr"
+    value = "2001:41d0:b:22a:35::2"
+    type = "AAAA"
+    ttl = 1
+}
+
+resource "cloudflare_record" "nmafrv4" {
+    domain = "${var.cloudflare_domain}"
+    name = "nmafrv4"
     value = "176.31.196.112"
     type = "A"
     ttl = 1
