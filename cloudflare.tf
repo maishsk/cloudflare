@@ -79,11 +79,18 @@ resource "cloudflare_record" "nmakc" {
 resource "cloudflare_record" "nmanc" {
     domain = "${var.cloudflare_domain}"
     name = "nmanc"
+    value = "2607:5600:c6:8b::2"
+    type = "AAAA"
+    ttl = 1
+}
+
+resource "cloudflare_record" "nmancv4" {
+    domain = "${var.cloudflare_domain}"
+    name = "nmancv4"
     value = "192.111.152.115"
     type = "A"
     ttl = 1
 }
-
 resource "cloudflare_record" "saltmaster" {
     domain = "${var.cloudflare_domain}"
     name = "saltmaster"
@@ -108,7 +115,7 @@ resource "cloudflare_record" "seeder" {
     ttl = 1
 }
 
-resource "cloudflare_record" "maishsk.com_mx1" {
+resource "cloudflare_record" "maishsk_com_mx1" {
     domain = "${var.cloudflare_domain}"
     name = "maishsk.com"
     value = "aspmx.l.google.com"
@@ -117,7 +124,7 @@ resource "cloudflare_record" "maishsk.com_mx1" {
     ttl = 1
 }
 
-resource "cloudflare_record" "maishsk.com_mx2" {
+resource "cloudflare_record" "maishsk_com_mx2" {
     domain = "${var.cloudflare_domain}"
     name = "maishsk.com"
     value = "alt1.aspmx.l.google.com"
@@ -126,16 +133,8 @@ resource "cloudflare_record" "maishsk.com_mx2" {
     ttl = 1
 }
 
-resource "cloudflare_record" "maishsk.com_mx3" {
-    domain = "${var.cloudflare_domain}"
-    name = "maishsk.com"
-    value = "alt2.aspmx.l.google.com"
-    type = "MX"
-    priority = 5
-    ttl = 1
-}
 
-resource "cloudflare_record" "maishsk.com_mx4" {
+resource "cloudflare_record" "maishsk_com_mx4" {
     domain = "${var.cloudflare_domain}"
     name = "maishsk.com"
     value = "aspmx2.googlemail.com"
@@ -152,7 +151,7 @@ resource "cloudflare_record" "mg" {
     ttl = 1
 }
 
-resource "cloudflare_record" "krs._domainkey.mg" {
+resource "cloudflare_record" "krs_domainkey_mg" {
     domain = "${var.cloudflare_domain}"
     name = "krs._domainkey.mg"
     value = "k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDcoTs0LJ1e0OtNZxiuC89z9oMIY9XVWku/dLPhIlmYO1MAq0OQGH4N5ROo3KqIwTC1i8eX7+4NZfxfYi1OL5Q6dt9NlAmCC8sqrpNjVz2L/LltKTrbF4FNAZ22vNzdGde7C5poLLgjojn4S0AoPTk6ADnqkpjkry6bIsUZ5yZCNwIDAQAB"

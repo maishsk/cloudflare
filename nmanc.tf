@@ -1,7 +1,7 @@
-resource "cloudflare_record" "maishsk.com_nmanc" {
+resource "cloudflare_record" "maishsk_com_nmanc" {
     domain = "${var.cloudflare_domain}"
     name = "maishsk.com"
-    value = "192.111.152.115"
-    type = "A"
+    value = "2607:5600:c6:8b::2"
+    type = "AAAA"
     ttl = 1
 }

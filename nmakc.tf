@@ -1,4 +1,4 @@
-resource "cloudflare_record" "maishsk.com_nmakc" {
+resource "cloudflare_record" "maishsk_com_nmakc" {
     domain = "${var.cloudflare_domain}"
     name = "maishsk.com"
     value = "2602:ffc5:ccc:ec::2"
