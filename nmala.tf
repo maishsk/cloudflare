@@ -1,7 +1,7 @@
 resource "cloudflare_record" "maishsk_com_nmala" {
     domain = "${var.cloudflare_domain}"
     name = "maishsk.com"
-    value = "45.43.221.20"
-    type = "A"
+    value = "2602:ffc5:ccd:1e6::2"
+    type = "AAAA"
     ttl = 1
 }
